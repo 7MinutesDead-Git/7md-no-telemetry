@@ -1,15 +1,15 @@
 {
   "name": "no-win-telemetry",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Kills windows telemetry processes on windows 11 home edition, as there's no other means of disabling *all* telemetry on home edition.",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "compile": "tsc app.ts"
   },
   "type": "module",
   "keywords": [],
-  "author": "",
+  "author": "7MinutesDead-Git",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.7.20",
