@@ -1,5 +1,5 @@
 # 7md-no-telemetry
-Kills windows telemetry processes on windows 11 home edition, as there's no other means of disabling *all* telemetry on home edition.
+Kills Windows telemetry processes on Windows 11 Home Edition, as there's no other means of disabling *all* telemetry on this edition.
 
 # Requirements
 - [Node 16.14.2+](https://nodejs.org/en/download/) (install via your preferred means)  
