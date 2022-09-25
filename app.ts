@@ -39,7 +39,7 @@ async function findProcess(): Promise<void> {
 
 async function loop(): Promise<never> {
     let laps = 0
-    console.log("Watching for telemetry..")
+    console.log("🦩Watching for telemetry..🦩")
 
     while (true) {
         await findProcess()
