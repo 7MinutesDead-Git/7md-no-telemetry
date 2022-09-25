@@ -26,3 +26,6 @@ The `Task Scheduler` is Windows' version of cron jobs, so I recommend having thi
   - In the `Add arguments` field, enter `npm start` (this is the command that will run automatically).
   - In the `Start in` field, enter the path to this cloned repo, i.e. `"C:\Cool7MDApps\no-win-telemetry"`
 7) Click `OK` to finish adding the task. Windows will likely ask you to confirm your password. And that's it!
+
+# Bugs, Concerns and Suggestions
+I made this *very* hastily just to get something up and running (and testing), so if you manage to come across this repo and have some suggestions, more specific terms to look for, or any problems, please submit an issue!
