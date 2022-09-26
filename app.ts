@@ -35,21 +35,35 @@ async function findProcess(): Promise<void> {
         console.error("Still a process in array!")
         console.error(pidsToKill)
     }
+    console.log("Done!\n")
 }
 
 async function loop(): Promise<never> {
-    let laps = 0
-    console.log("🦩Watching for telemetry..🦩")
+    const interval = 500
+    let frame = 0
+    let waited = 0
+    const loadingAnimations = [
+        '⣾',
+        '⣽',
+        '⣻',
+        '⢿',
+        '⡿',
+        '⣟',
+        '⣯',
+        '⣷'
+    ]
 
     while (true) {
-        await findProcess()
-        await wait(1000)
+        await wait(interval)
+        waited += interval
+        frame = (frame + 1) % loadingAnimations.length
+        const currentTime = new Date().toLocaleTimeString()
+        process.stdout.write(`🦩 ${loadingAnimations[frame]} ${currentTime} // Watching for telemetry 🦩\r`)
 
-        if (laps > 1800) {
-            console.log(`🦩Still watching as of ${new Date().toLocaleTimeString()}🦩`)
-            laps = 0
+        if (waited >= 1000) {
+            await findProcess()
+            waited = 0
         }
-        laps++
     }
 }
 
